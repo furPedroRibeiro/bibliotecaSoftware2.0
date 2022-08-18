@@ -122,4 +122,13 @@
       echo "Erro ao cadastrar"; 
     }
   }
+  function MostrarAutorEditora(){
+    $sql = 'SELECT * FROM autor AND editora;';
+    $res  = $GLOBALS['conn']->query($sql);
+    if($res){
+      echo $res;
+    } else{
+      echo "Erro ao consultar";
+    }
+  }
 ?>

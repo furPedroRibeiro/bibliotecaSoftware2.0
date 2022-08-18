@@ -150,7 +150,29 @@
         <button class="buttonDefault" name="autor">Enviar</button>
       </form>
       </div>
+      <div class="form">
+      <h1>Cadastrar Livro</h1>
+      <form action="" method="post" class="form" name="autor">
+        <input
+          type="text"
+          name="nome"
+          id="nome"
+          placeholder="Digite o título do livro: "
+        />
+        <label for="ano">Ano do livro</label>
+        <input type="date" name="ano" id="ano">
+        <input type="text" name="classif" id="classif" placeholder="Classificação do livro:">
+        <input type="text" name="estado" id="estado" placeholder="Digite o estado do livro:">
+        <input type="text" name="editora" id="editora" placeholder="Digite o código da editora:">
+        <input type="text" name="autor" id="autor" placeholder="Digite o código do autor:">
+        <input type="text" name="isbn" id="isbn" placeholder="ISBN do livro:">
+        <input type="text" name="qtd" id="qtd" placeholder="Quantidade de livros:">
+        <input type="text" name="sinopse" id="sinopse" placeholder="Sinopse do livro:">
+        <button class="buttonDefault" name="livro">Enviar</button>
+      </form>
+      </div>
       <a href="pageAdm.html"><button class="buttonDefault">Voltar</button></a>
+      <a href="showAut.php"><button class="buttonDefault" name="show">Ver autores e editoras</button></a>
     </div>
   </body>
 </html>
