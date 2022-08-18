@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <!-- links -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Rubik&family=Square+Peg&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    :root {
+      --corPrincipal: #1b3d26;
+      --textColor: rgb(237, 236, 227);
+    }
+    body {
+      background-color: var(--textColor);
+      font-family: 'Open Sans', sans-serif;
+    }
+    .header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      height: 12vh;
+      width: 100%;
+      background-color: var(--corPrincipal);
+      color: var(--textColor);
+
+      font-family: 'Rubik', sans-serif;
+      font-family: 'Square Peg', cursive;
+      font-size: 60px;
+    }
+    .main {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+
+      margin-top: 5vh;
+
+      height: 84vh;
+      gap: 6vh;
+    }
+  </style>
+  <body>
+    <header class="header">
+      <div class="textLogo"><span>AdInfinitum</span></div>
+    </header>
+    <main class="main">
+      <div class="img">
+        <a href="pagesHtml/pageMain.html"
+          ><img src="img/logo.png" alt="Livro svg" width="225px"
+        /></a>
+      </div>
+    </main>
+  </body>
+</html>
