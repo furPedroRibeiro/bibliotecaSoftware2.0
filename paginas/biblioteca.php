@@ -19,11 +19,12 @@
       } else{
           $retorno ['erro'] = true;
       }
-      if($tipo == 'json')
+      if($tipo == 'json'){
         return json_encode($retorno);
-      else 
+      }else {
         return $retorno;
-    }
+      }
+      }
           function cadastrarUsuario($rm,$nome,$email,$senha,$userstatus,$adm){
         $sql = 'INSERT INTO usuario(rm, nome, email, senha, user_status, adm) VALUES ('.$rm.',"'.$nome.'","'.$email.'","'.$senha.'","'.$userstatus.'","'.$adm.'")';
         $destino = 'usuario/fotos/'.$rm;
@@ -122,13 +123,55 @@
       echo "Erro ao cadastrar"; 
     }
   }
-  function MostrarAutorEditora(){
-    $sql = 'SELECT * FROM autor AND editora;';
+  function MostrarAutor(){
+    $query = "SELECT * from autor";
+    $result = $GLOBALS['conn']->query($query);
+    if($result){
+      while($fetch = $result->fetch_assoc()) {
+        echo "<tr>";
+        foreach ($fetch as $field => $value) {
+            echo '<td>'.$value.'</td>' ;
+        }
+      }
+    } else{
+      echo "Erro";
+    }
+  }
+  function MostrarGenero(){
+    $query = "SELECT * from genero";
+    $result = $GLOBALS['conn']->query($query);
+    if($result){
+      while($fetch = $result->fetch_assoc()) {
+        echo "<tr>";
+        foreach ($fetch as $field => $value) {
+            echo '<td>'.$value.'</td>' ;
+        }
+      }
+    } else{
+      echo "Erro";
+    }
+  }
+  function MostrarEditora(){
+    $query = "SELECT * from editora";
+    $result = $GLOBALS['conn']->query($query);
+    if($result){
+      while($fetch = $result->fetch_assoc()) {
+        echo "<tr>";
+        foreach ($fetch as $field => $value) {
+            echo '<td>'.$value.'</td>' ;
+        }
+      }
+    } else{
+      echo "Erro";
+    }
+  }
+  function CadastrarLivro($ano, $classificacao, $estado, $id_editora, $id_genero, $isbn, $qtd, $sinopse, $titulo){
+    $sql = 'INSERT INTO livro(ano, capa, cd, classificacao, estado, id_editora, id_genero, isbn, qtd, sinopse, titulo) VALUES ("'.$ano.'", null, null, "'.$classificacao.'", "'.$estado.'", "'.$id_editora.'", "'.$id_genero.'", "'.$isbn.'", "'.$qtd.'", "'.$sinopse.'", "'.$titulo.'")';
     $res  = $GLOBALS['conn']->query($sql);
     if($res){
-      echo $res;
-    } else{
-      echo "Erro ao consultar";
+      echo "Livro cadastrado";
+    } else {
+      echo "Erro ao cadastrar"; 
     }
   }
 ?>
